@@ -1,12 +1,12 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<header class="navbar navbar-fixed-top navbar-inverse" id="headerColour">
   <div class="container">
   	<%= link_to "Jason Post", root_path, id: "logo" %> 
   	<nav>
   		<ul class="nav navbar-nav navbar-right" id="heading"> 
-  			<li><%= link_to "About", about_path %></li>
-  			<li><%= link_to "Composition", '#' %></li>
-  			<li><%= link_to "Software", '#' %></li>
-  			<li><%= link_to "Contact", contact_path %></li> 
+  			<li><%= link_to "About", about_path, id: "headTextCol" %></li>
+  			<li><%= link_to "Composition", '#', id: "headTextCol" %></li>
+  			<li><%= link_to "Software", software_path, id: "headTextCol" %></li>
+  			<li><%= link_to "Contact", contact_path, id: "headTextCol" %></li> 
   		</ul> 
   	</nav>
   </div>

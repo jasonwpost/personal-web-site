@@ -2,6 +2,8 @@
 @import "bootstrap";
 
 /* universal */
+
+
 body {
   padding-top: 60px;
 }
@@ -27,17 +29,20 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  color: white;
 }
 h2 {
   font-size: 2em;
-  letter-spacing: -1px;
+  letter-spacing: 0px;
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #777;
+  color: white;
 }
 p{
 font-size: 1.1em; line-height: 1.7em;
+color: black;
+
 }
 
 #logo {
@@ -63,10 +68,10 @@ footer {
   color: #777;
 }
 footer a {
-  color: #555;
+  color: rgba(255, 255, 255, 0.7);
 }
 footer a:hover {
-  color: #222;
+  color: white;
 }
 footer small {
   float: left;
@@ -83,7 +88,22 @@ footer ul li {
 /* header */
 
 #heading {
-     li{
-  margin: 0 60px 0 0;
-}
+  li{
+    margin: 0 60px 0 0;
   }
+}
+
+#headTextCol{
+  color: rgba(255, 255, 255, 0.6);
+  
+}
+
+#headTextCol:hover {
+    color: white;
+  }
+
+#headerColour {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-style: none;
+}
+

@@ -7,4 +7,6 @@ Rails.application.routes.draw do
 
   get 'contact' => 'static_pages#contact'
 
+  get 'software' => 'static_pages#software'
+
 end
