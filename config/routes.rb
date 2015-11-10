@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :messages, only: [:new, :create]
+
   get 'users/new'
 
   root 'static_pages#home'
