@@ -6,11 +6,11 @@ class MessagesController < ApplicationController
   def create
   	@message = Message.new(message_params)
 
-  	if @message.valid?
+  	if @message.valid? && verify_recaptcha:(model => @message, :message => t('incorrect_captcha'))
       MessageMailer.message_me(@message).deliver_now
       redirect_to new_message_path
       flash[:success] = "Message sent"
-  	else
+    else
   		render :new
   	end
   end
