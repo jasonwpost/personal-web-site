@@ -8,7 +8,8 @@ class MessagesController < ApplicationController
 
   	if @message.valid?
       MessageMailer.message_me(@message).deliver_now
-  		redirect_to new_message_path, notice: "Thankyou for your mesage."
+      redirect_to new_message_path
+      flash[:success] = "Message sent"
   	else
   		render :new
   	end
