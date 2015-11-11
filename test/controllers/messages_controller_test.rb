@@ -1,9 +1,15 @@
 require 'test_helper'
 
 class MessagesControllerTest < ActionController::TestCase
-  test "should get new" do
-    get :new
+  
+    def setup
+      @base_title = "Jason Post - Composer, Sound Artist, Developer"
+    end
+    
+    test "should get contact" do
+    get :contact
     assert_response :success
+    assert_select "title", "Contact | #{@base_title}"
   end
 
   test "succesful post" do
@@ -17,7 +23,7 @@ class MessagesControllerTest < ActionController::TestCase
   end
 
 
-    assert_redirected_to new_message_path
+    assert_redirected_to contact_path
     last_email = ActionMailer::Base.deliveries.last
 
     assert_equal 'hi', last_email.subject
@@ -29,7 +35,7 @@ class MessagesControllerTest < ActionController::TestCase
   end
 
   test "failed post" do
-  	post :create, message: {\
+  	post :create, message: {
   		name: '',
   		email: '',
   		subject: '',

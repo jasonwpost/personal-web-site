@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :messages, only: [:new, :create]
+  resources :messages, only: [:contact, :create]
 
   get 'users/new'
 
@@ -9,10 +9,8 @@ Rails.application.routes.draw do
 
   get 'about' =>'static_pages#about'
 
-  #get 'contact' => 'static_pages#contact'
-
   get 'software' => 'static_pages#software'
 
-  get 'contact' => 'messages#new'
+  get 'contact' => 'messages#contact'
 
 end
