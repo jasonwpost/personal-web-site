@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :messages, only: [:contact, :create]
 
   get 'users/new'
 
@@ -9,8 +8,14 @@ Rails.application.routes.draw do
 
   get 'about' =>'static_pages#about'
 
+  get 'compositions' => 'compositions#index'
+
   get 'software' => 'static_pages#software'
 
   get 'contact' => 'messages#contact'
+
+  get '/compositons/:id' => 'compositions#show', as: :composition
+
+  resources :messages, only: [:contact, :create]
 
 end

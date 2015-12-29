@@ -1,0 +1,17 @@
+<% provide(:title, "Compositions") %>
+<h1>Compositions</h1>
+<% @compositions.each do |composition| %>
+<%= link_to(composition) do %>
+<div id="paragraph">
+	<div class="row">
+		<div class="col-md-9">
+			<p class="title"><h3> <%= composition.title %></h3></p>
+			<p class="year"><%= composition.year %></p>
+			<p class="forces"><%= composition.forces %></p>
+		</div>
+	</div>
+</div>
+<%end%>
+<br>
+<% end %>
+

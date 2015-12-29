@@ -1,0 +1,10 @@
+<% provide(:title, @composition.title) %>
+<h1><%= @composition.title %></h1>
+<div id="paragraph">
+  <p>Composed <%= @composition.year %></p>
+  <p class="forces"><%= @composition.forces %></p>
+  <br>
+  <%=raw @composition.streaming %>
+  <br><br>
+  <p class="programme-note"><%= @composition.programme_note %></p>
+</div>
