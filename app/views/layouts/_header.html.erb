@@ -6,7 +6,22 @@
   			<li><%= link_to "About", about_path, id: "headTextCol" %></li>
   			<li><%= link_to "Compositions", compositions_path, id: "headTextCol" %></li>
   			<li><%= link_to "Software", software_path, id: "headTextCol" %></li>
-  			<li><%= link_to "Contact", contact_path, id: "headTextCol" %></li> 
+  			<li><%= link_to "Contact", contact_path, id: "headTextCol" %></li>
+        <% if logged_in? %>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Admin <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu" id="dropdown-format">
+              <li><%= link_to "Change bio", current_user %></li>
+              <li><%= link_to "Settings", about_path %></li>
+              <li class="divider"></li>
+              <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+            </ul> 
+          </li>
+          <%else%>
+          <li></li>
+        <%end%>   
   		</ul> 
   	</nav>
   </div>

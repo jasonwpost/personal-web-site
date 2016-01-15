@@ -20,6 +20,7 @@
   border: none;
  }
 
+
 body {
   padding-top: 60px;
 }
@@ -148,3 +149,8 @@ label {
   color: white;
   text-transform: uppercase;
 }
+
+ #dropdown-format li{
+       margin: 0 0 0 0;
+       text-align: center;
+ }

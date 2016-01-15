@@ -2,6 +2,12 @@ Rails.application.routes.draw do
 
   get 'users/new'
 
+  get 'users/new'
+
+  get 'sessions/new'
+
+  get 'users/new'
+
   root 'static_pages#home'
 
   get 'help' => 'static_pages#help'
@@ -16,6 +22,14 @@ Rails.application.routes.draw do
 
   get '/compositons/:id' => 'compositions#show', as: :composition
 
+  get 'login' => 'sessions#new'
+
+  post 'login' => 'sessions#create'
+
+  delete 'logout' => 'sessions#destroy'
+
   resources :messages, only: [:contact, :create]
+
+  resources :users
 
 end
