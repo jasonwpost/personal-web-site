@@ -14,13 +14,9 @@ Rails.application.routes.draw do
 
   get 'about' =>'static_pages#about'
 
-  get 'compositions' => 'compositions#index'
-
   get 'software' => 'static_pages#software'
 
   get 'contact' => 'messages#contact'
-
-  get '/compositons/:id' => 'compositions#show', as: :composition
 
   get 'login' => 'sessions#new'
 
@@ -29,6 +25,8 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
 
   resources :messages, only: [:contact, :create]
+
+  resources :compositions
 
   resources :users
 

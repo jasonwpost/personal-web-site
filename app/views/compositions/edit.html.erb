@@ -1,0 +1,28 @@
+<% provide(:title, "Edit Composition") %>
+<h1>Update Composition</h1>
+
+<div class="row">
+	<div class="col-md-6 col-md-offset3">
+		<%= form_for @composition, :method => :PATCH do |f| %>
+		<%= render 'shared/error_messages', object: f.object %>
+
+		<%= f.label :title %>
+		<%= f.text_field :title, class: 'form-control' %>
+
+		<%= f.label :forces %>
+		<%= f.text_field :forces, class: 'form-control' %>
+
+		<%= f.label :year %>
+		<%= f.text_field :year, class: 'form-control' %>
+
+		<%= f.label :programme_note %>
+		<%= f.text_field :programme_note, class: 'form-control' %>
+
+		<%= f.label :streaming %>
+		<%= f.text_field :streaming, class: 'form-control' %>
+
+		<%= f.label :image %>
+		<%= f.text_field :image, class: 'form-control' %>
+		<br>
+		<%= f.submit "Save changes", class: "btn btn-primary" %>
+		<% end %>

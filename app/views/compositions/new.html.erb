@@ -1,0 +1,31 @@
+<% provide(:title, "New Composition") %>
+<% provide(:button_text, 'Create Composition') %>
+<h1>Create Composition</h1>
+
+<div class="row">
+	<div class="col-md-6 col-md-offset3">
+		<%= form_for(@composition) do |f| %>
+		<%= render 'shared/error_messages', object: f.object %>
+
+		<%= f.label :title %>
+		<%= f.text_field :title, class: 'form-control' %>
+
+		<%= f.label :forces %>
+		<%= f.text_field :forces, class: 'form-control' %>
+
+		<%= f.label :year %>
+		<%= f.text_field :year, class: 'form-control' %>
+
+		<%= f.label :programme_note %>
+		<%= f.text_field :programme_note, class: 'form-control' %>
+
+		<%= f.label :streaming %>
+		<%= f.text_field :streaming, class: 'form-control' %>
+
+		<%= f.label :image %>
+		<%= f.text_field :image, class: 'form-control' %>
+		<br>
+		<%= f.submit "Create Composition", class: "btn btn-primary" %>
+		<% end %>
+	</div>
+</div>

@@ -8,6 +8,9 @@
 			<p class="title"><h3> <%= composition.title %></h3></p>
 			<p class="year"><%= composition.year %></p>
 			<p class="forces"><%= composition.forces %></p>
+			<% if logged_in? %>
+			<%= link_to "delete", composition, method: :delete, data: { confirm: "Are you sure?" } %>
+			<% end %>
 		</div>
 	</div>
 </div>
