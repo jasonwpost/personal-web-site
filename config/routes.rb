@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'software/new'
+
   get 'users/new'
 
   get 'users/new'
