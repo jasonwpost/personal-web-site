@@ -21,3 +21,5 @@
 
 #ignore public keys
 /config/initializers/recaptcha.rb
+
+.DS_Store
